@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*TITLE*/
+.title-div{
+  width: 100%;
+}
+.title-div h1{
+  width: fit-content;
+  font-size: 80px;
+  margin: 20px auto;
+  color: rgb(95, 104, 102);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*CHOOSE BOARD*/
+.choose-board{
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 70px;
+}
+.button{
+  margin-top: 20px;
+  font-size: 35px;
+  padding: 5px 10px;
+  color: rgb(95, 104, 102);
+  border: 2px solid rgb(95, 104, 102);
+  transition: 0.15s all linear;
+  box-shadow: 10px 10px rgb(220, 233, 230);
+}
+.button:hover{
+  transform: scale(0.98) translate(3px,3px);
+  box-shadow: 7px 7px rgb(220, 233, 230);
 }
 
-.App-link {
-  color: #61dafb;
+
+/*BOARDS*/
+.game-boards{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.board{
+  width: 500px;
+  height: 500px;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 2px solid black;
+}
+
+.board-square{
+  width: 10%;
+  height: 10%;
+  background-color: rgb(173, 204, 197);
+  border: 1px solid rgb(95, 104, 102);
+}
+.display-hover:hover{
+  background-color: rgb(105, 150, 141);
+}
+.board-square-miss{
+  background-color: rgb(143, 155, 153);
+}
+.board-square-hit{
+  background-color: rgb(150, 118, 116);
+}
+.square-isShip{
+  background-color: rgb(115, 156, 148);
+}
+
+
+.board-basic-square-active{
+  background-color: rgb(80, 112, 105);
+}
+
+/*SCORE*/
+.game-scores{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.score{
+  margin: 50px 20px;
+  display:flex;
+  flex-direction: column;
+  color: rgb(95, 104, 102);
+  padding: 15px 30px;
+  border: 2px solid rgb(95, 104, 102);
+  width: fit-content;
+}
+.score h2{
+  width: fit-content;
+  align-self: center;
+  font-size: 50px;
+}
+
+.score h3{
+  width: fit-content;
+  font-size: 25px;
+}
+
+
+
+.winner-banner{
+  background-color: rgb(200, 230, 223);
+  border: 2px solid rgb(95, 104, 102);
+  color: rgb(109, 158, 147);
+  width: fit-content;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  margin: 90px auto;
+  align-items: center;
+  box-shadow: 20px 20px rgb(220, 233, 230);
+  transition: 0.15s all linear;
+}
+.winner-banner:hover{
+  transform: scale(0.98) translate(8px,8px);
+  box-shadow: 12px 12px rgb(220, 233, 230);
+}
+.winner-banner h1{
+  font-size: 90px;
+  text-align: center;
+}
+.winner-banner button{
+  width: fit-content;
+  box-shadow: 10px 10px rgb(214, 243, 236);
+}
+.winner-banner button:hover{
+  box-shadow: 7px 7px rgb(214, 243, 236);
 }
